@@ -1,0 +1,206 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: black;
+  background-image: url(../img/netflix.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  font-family: Arial, Helvetica;
+  color: #8c8c8c;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-image: none;
+    background-color: #000000;
+  }
+}
+a {
+  color: #8c8c8c;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.contenedor {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logotipo {
+  margin-top: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+  .logotipo {
+    max-width: 200px;
+    margin-left: 1rem;
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .logotipo {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.formulario-login {
+  background-color: rgba(0, 0, 0, 0.85);
+  max-width: 450px;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.formulario-login legend {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+.formulario-login .campo {
+  display: flex;
+  position: relative;
+}
+.formulario-login .campo span {
+  position: absolute;
+  top: 1.1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.formulario-login .campo input {
+  background-color: #323232;
+  border-radius: 5px;
+  color: white;
+  flex: 1;
+  margin-bottom: 1rem;
+  padding: 1.3rem 1rem 0.7rem 1rem;
+  outline: none;
+}
+.formulario-login .campo input:focus {
+  background-color: #454545;
+}
+.formulario-login .campo input:focus + label {
+  font-size: 0.6rem;
+  top: 0.5rem;
+}
+.formulario-login .campo label {
+  position: absolute;
+  top: 1.1rem;
+  left: 1rem;
+  transition: font-size 0.3s ease, top 0.2s ease;
+}
+.formulario-login .campo label.valido {
+  font-size: 0.6rem;
+  top: 0.5rem;
+}
+
+.submit input {
+  background-color: #e50914;
+  width: 100%;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.contenido-inferior {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 6rem;
+}
+.contenido-inferior a {
+  font-size: 1.2rem;
+}
+.contenido-inferior .nuevo-usuario {
+  font-size: 1.2rem;
+}
+.contenido-inferior .nuevo-usuario a {
+  color: white;
+  font-size: 1.4rem;
+}
+
+.site-footer {
+  margin-top: 5rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+@media screen and (max-width: 768px) {
+  .site-footer {
+    border-top: 1px solid #8c8c8c;
+  }
+}
+.site-footer .contenedor {
+  max-width: 60%;
+}
+.site-footer .contenedor select {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 1rem 2rem;
+  outline: none;
+  border-radius: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 1rem auto;
+}
+.site-footer .contenedor select option {
+  color: #ffffff;
+  background-color: #323232;
+  text-align: center;
+}
+.site-footer .contenedor p {
+  text-align: center;
+}
+
+.menu-footer {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.menu-footer a {
+  margin-right: 2rem;
+}
+.menu-footer a:last-of-type {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .menu-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-footer a {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .menu-footer a:first-of-type {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .menu-footer {
+    text-align: center;
+  }
+}

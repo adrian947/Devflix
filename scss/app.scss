@@ -1,0 +1,203 @@
+@import "variables";
+@import "mixins";
+
+html {
+  @include boxs(border-box);
+}
+*,
+*:after,
+*:before {
+  @include boxs(inherit);
+}
+
+body {
+  background-color: black;
+  background-image: url(../img/netflix.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  font-family: $fuentePrincipal;
+  color: $gris2;
+  height: 100%;
+
+  @include tablet {
+    background-image: none;
+    background-color: $negro;
+  }
+  @include telefono {
+  }
+}
+a {
+  color: $gris2;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.contenedor {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logotipo {
+  margin-top: 0.5rem;
+
+  @include tablet {
+    max-width: 200px;
+    margin-left: 1rem;
+    margin-top: 0px;
+  }
+  @include telefono {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.formulario-login {
+  background-color: rgba($color: #000000, $alpha: 0.85);
+  max-width: 450px;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  text-align: center;
+
+  legend {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $blanco;
+    font-weight: bold;
+  }
+  .campo {
+    display: flex;
+    position: relative;
+    span {
+      position: absolute;
+      top: 1.1rem;
+      right: 1rem;
+      cursor: pointer;
+    }
+    input {
+      background-color: $gris;
+      border-radius: 5px;
+      color: white;
+      flex: 1;
+      margin-bottom: 1rem;
+      padding: 1.3rem 1rem 0.7rem 1rem;
+      outline: none;
+      &:focus {
+        background-color: $gris3;
+
+        + label {
+          font-size: 0.6rem;
+          top: 0.5rem;
+        }
+      }
+    }
+    label {
+      position: absolute;
+      top: 1.1rem;
+      left: 1rem;
+      transition: font-size 0.3s ease, top 0.2s ease;
+      &.valido {
+        font-size: 0.6rem;
+        top: 0.5rem;
+      }
+    }
+  }
+}
+
+.submit {
+  input {
+    @include boton($primario);
+  }
+}
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.contenido-inferior {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 6rem;
+
+  a {
+    font-size: 1.2rem;
+  }
+
+  .nuevo-usuario {
+    a {
+      color: white;
+      font-size: 1.4rem;
+    }
+
+    font-size: 1.2rem;
+  }
+}
+
+.site-footer {
+  margin-top: 5rem;
+  padding: 1rem;
+  
+
+  background-color: rgba($color: #000000, $alpha: 0.85);
+  @include tablet() {
+    border-top: 1px solid $gris2;
+  }
+  .contenedor {
+    max-width: 60%;
+
+    select {
+      display: block;
+      appearance: none;
+      padding: 1rem 2rem;
+      outline: none;
+      border-radius: 10px;
+      background-color: $negro;
+      color: $blanco;
+      margin: 1rem auto;
+
+      option {
+        color: $blanco;
+        background-color: $gris;
+        text-align: center;
+      }
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.menu-footer {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  a {
+    margin-right: 2rem;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  @include tablet() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+
+      &:first-of-type {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  @include telefono() {
+    text-align: center;
+  }
+}
